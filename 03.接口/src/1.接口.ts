@@ -17,36 +17,36 @@
 
 
 
-// 接口描述函数
-// interface MyFunc {
-//   (a: number, b: number): number
-// }
+//接口描述函数
+interface MyFunc {
+  (a: number, b: number): number
+}
 
 // 使用接口MyFunc定义函数addCount
-// let addCount: MyFunc = function (a: number, b: number): number {
-//   return a + b;
-// }
+let addCount: MyFunc = function (a: number, b: number): number {
+  return a + b;
+}
 
-// function goAdd(callback: MyFunc) { // 也可以使用接口给回调函数添加类型
-//   let x = callback(10, 20);
-// }
-// goAdd(function(a: number, b: number) {
-//   return a + b;
-// })
+function goAdd(callback: MyFunc) { // 也可以使用接口给回调函数添加类型
+  let x = callback(10, 20);
+}
+goAdd(function(a: number, b: number) {
+  return a + b;
+})
 
 // 定义一个给回调函数添加类型的接口
-// interface someEvent {
-//   (e: MouseEvent): void
-// }
-// let div = document.querySelector("div");
-// function on(el: HTMLElement, eventname: string, callback: someEvent) {
+interface someEvent {
+  (e: MouseEvent): void
+}
+let div = document.querySelector("div");
+function on(el: HTMLElement, eventname: string, callback: someEvent) {
   
-// }
-// if(div) {
-//   on(div, "click", function(e) {
-//     e.clientX
-//   })
-// }
+}
+if(div) {
+  on(div, "click", function(e) {
+    e.clientX
+  })
+}
 
 // 接口的合并，两者会合并成一个接口
 interface Inter1 {

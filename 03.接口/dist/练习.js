@@ -4,7 +4,6 @@
 // let css: (el: Element, attrs: Array<string>, callback: func) => void = function(el, attrs , callback) {
 //   <HTMLDivElement>el
 // }
-
 // let div = document.querySelector("div");
 // css(div, ["width", "height"], (attr, val) => {
 //   if(attr === "width") {
