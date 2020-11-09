@@ -36,7 +36,7 @@ class Teacher extends Person2 {
   doOverloaded(a: number, b: string): void;
   doOverloaded(a: number, b: string, c: boolean): void;
   doOverloaded(a: number, b: string, c? :boolean) {
-    super.doOverloaded(a, b);
+    super.doOverloaded(a, b); // 调用父类中的方法
     if(c) {
       console.log("重载的doOverloaded")
     }

@@ -9,7 +9,7 @@ class Person5 {
   }
 }
 
-interface TypeObj { // 定义一个供类类型使用的接口
+interface TypeObj { // 定义一个供对象类型使用的接口
   name: string,
   age: number
 }
