@@ -45,7 +45,7 @@ var Teacher = /** @class */ (function (_super) {
         console.log("\u6211\u662F\u4E00\u540D" + job + "\u8001\u5E08");
     };
     Teacher.prototype.doOverloaded = function (a, b, c) {
-        _super.prototype.doOverloaded.call(this, a, b);
+        _super.prototype.doOverloaded.call(this, a, b); // 调用父类中的方法
         if (c) {
             console.log("重载的doOverloaded");
         }

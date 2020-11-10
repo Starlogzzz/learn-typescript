@@ -20,7 +20,7 @@ class Person3 {
   }
   
   get age() {
-    return 1000;
+    return this._age;
   }
 }
 
@@ -35,9 +35,9 @@ let pricident = new Person3(1, "trump", "man", 72);
 // pricident.id = 2; // 无法修改只读
 pricident.name = "little trump"; // 可以修改
 // pricident.sex; // 只能在类的内部或子类中才能访问
-// pricident.age; // 外部无法访问和修改
+// pricident._age; // 外部无法访问和修改
 
-pricident.age = 7;
+pricident.age = 51;
 pricident.age;
 console.log(pricident.age)
 
