@@ -3,10 +3,8 @@ abstract class ReactComponent<T1, T2> { // 含有抽象方法的类一定是抽�
     public state: T1, // 给state定义一个类型，方便子类创建时检查
     public props: T2, // 同上
   ) {
-    this.props = props;
-    this.state = state;
+    this.props = props
   }
-
   abstract render(): string // 标记为抽象方法不能有实现，只定义
 }
 
@@ -23,16 +21,12 @@ class MyComponent extends ReactComponent<ReactState, ReactProps> {
     props: ReactProps
   ) {
     super(state, props);
-
-    this.state = { // 有ReactState的类型提示
-      num: 20
-    }
+    this.state = state;
   }
-
   render() { // 抽象类必须实现抽象方法
     this.props.val; // 有ReactProps的类型提示
     this.state.num; // 有ReactState的类型提示
-    return "<MyComponent />"
+    return "<NewComponent />"
   }
 }
 

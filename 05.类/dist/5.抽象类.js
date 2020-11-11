@@ -17,7 +17,6 @@ var ReactComponent = /** @class */ (function () {
         this.state = state;
         this.props = props;
         this.props = props;
-        this.state = state;
     }
     return ReactComponent;
 }());
@@ -25,15 +24,13 @@ var MyComponent = /** @class */ (function (_super) {
     __extends(MyComponent, _super);
     function MyComponent(state, props) {
         var _this = _super.call(this, state, props) || this;
-        _this.state = {
-            num: 20
-        };
+        _this.state = state;
         return _this;
     }
     MyComponent.prototype.render = function () {
         this.props.val; // 有ReactProps的类型提示
         this.state.num; // 有ReactState的类型提示
-        return "<MyComponent />";
+        return "<NewComponent />";
     };
     return MyComponent;
 }(ReactComponent));
